@@ -1,0 +1,25 @@
+{
+    "translations": {
+        "de": {
+            "Watchdog interval": "Watchdog-Intervall",
+            "seconds": "Sekunden",
+            "The watchdog regularly compares the pairs and corrects differing values. 0 turns it off. With one direction (→ or ←) the source variable always wins. With both directions (↔) the most recently updated variable wins.": "Der Watchdog gleicht die Paare regelmäßig ab und setzt abweichende Werte nach. 0 schaltet ihn aus. Bei einer Richtung (→ oder ←) gewinnt immer die Quellvariable. Bei beiden Richtungen (↔) gewinnt die Variable, die zuletzt aktualisiert wurde.",
+            "Variables": "Variablen",
+            "Name": "Name",
+            "Variable 1": "Variable 1",
+            "Variable 2": "Variable 2",
+            "Direction": "Richtung",
+            "Variable 1 ↔ Variable 2": "Variable 1 ↔ Variable 2",
+            "Variable 1 → Variable 2": "Variable 1 → Variable 2",
+            "Variable 1 ← Variable 2": "Variable 1 ← Variable 2",
+            "Donations": "Spenden / Schenkung",
+            "This module is free for non-commercial use. Donations to support the author are accepted here:    ": "Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:    ",
+            "Deviation": "Abweichung",
+            "In sync": "Synchron",
+            "Deviating pairs": "Abweichende Paare",
+            "Last run": "Letzter Abgleich",
+            "Last error": "Letzter Fehler",
+            "Target %d not reachable": "Ziel %d nicht erreichbar"
+        }
+    }
+}

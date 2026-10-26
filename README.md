@@ -1,14 +1,14 @@
 [![Version](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
 ![Version](https://img.shields.io/badge/Symcon%20Version-9.0%20%3E-blue.svg)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Check Style](https://github.com/Schnittcher/UniversalGateway/actions/workflows/style.yml/badge.svg)](https://github.com/Schnittcher/UniversalGateway/actions/workflows/style.yml)
-[![Tests](https://github.com/Schnittcher/UniversalGateway/actions/workflows/tests.yml/badge.svg)](https://github.com/Schnittcher/UniversalGateway/actions/workflows/tests.yml)
+[![Check Style](https://github.com/Schnittcher/Variablenspiegel/actions/workflows/style.yml/badge.svg)](https://github.com/Schnittcher/Variablenspiegel/actions/workflows/style.yml)
+[![Tests](https://github.com/Schnittcher/Variablenspiegel/actions/workflows/tests.yml/badge.svg)](https://github.com/Schnittcher/Variablenspiegel/actions/workflows/tests.yml)
 
-# UniversalGateway
+# Variablenspiegel
 Mit diesem Modul ist es möglich Variablen synchron zu halten, ohne mehrere Scripte oder Variablen anlegen zu müssen.
 
 ## Inhaltsverzeichnis
-- [UniversalGateway](#universalgateway)
+- [Variablenspiegel](#variablenspiegel)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [1. Voraussetzungen](#1-voraussetzungen)
   - [2. Funktionsumfang](#2-funktionsumfang)
@@ -33,7 +33,7 @@ Die einzelnen Funktionen stehen bei den Instanzen unter "Enthaltene Module" und 
 
 ## 3. Enthaltene Module
 
-* [UniversalGateway](UniversalGateway/README.md)
+* [Variablenspiegel](Variablenspiegel/README.md)
   * Hält Variablenpaare synchron: Ändert sich eine Variable eines Paares, wird der Wert über die Aktion der anderen Variable übernommen.
 
 ## 4. Installation
@@ -41,7 +41,7 @@ Die einzelnen Funktionen stehen bei den Instanzen unter "Enthaltene Module" und 
 Die Installation erfolgt über den IP-Symcon Module Store.
 
 ## 5. Konfiguration in IP-Symcon
-Eine Instanz UniversalGateway anlegen und die Variablenpaare in der Liste eintragen. Details stehen in der [README des Moduls](UniversalGateway/README.md).
+Eine Instanz Variablenspiegel anlegen und die Variablenpaare in der Liste eintragen. Details stehen in der [README des Moduls](Variablenspiegel/README.md).
 
 ## 6. Spenden
 
