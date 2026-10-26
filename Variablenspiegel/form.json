@@ -3,18 +3,18 @@
         {
             "type": "NumberSpinner",
             "name": "WatchdogInterval",
-            "caption": "Watchdog-Intervall",
-            "suffix": "Sekunden",
+            "caption": "Watchdog interval",
+            "suffix": "seconds",
             "minimum": 0
         },
         {
             "type": "Label",
-            "caption": "Der Watchdog gleicht die Paare regelmäßig ab und setzt abweichende Werte nach. 0 schaltet ihn aus. Bei einer Richtung (→ oder ←) gewinnt immer die Quellvariable. Bei beiden Richtungen (↔) gewinnt die Variable, die zuletzt aktualisiert wurde."
+            "caption": "The watchdog regularly compares the pairs and corrects differing values. 0 turns it off. With one direction (→ or ←) the source variable always wins. With both directions (↔) the most recently updated variable wins."
         },
         {
             "type": "List",
             "name": "Variables",
-            "caption": "Variablen",
+            "caption": "Variables",
             "rowCount": 0,
             "add": true,
             "delete": true,
@@ -51,7 +51,7 @@
                     }
                 },
                 {
-                    "caption": "Richtung",
+                    "caption": "Direction",
                     "name": "Direction",
                     "width": "200px",
                     "add": 0,
@@ -80,11 +80,11 @@
     "actions": [
         {
             "type": "Label",
-            "caption": "Spenden / Schenkung"
+            "caption": "Donations"
         },
         {
             "type": "Label",
-            "caption": "Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:    "
+            "caption": "This module is free for non-commercial use. Donations to support the author are accepted here:    "
         },
         {
             "type": "RowLayout",

@@ -1,4 +1,4 @@
-# UniversalGateway
+# Variablenspiegel
 Hält Variablenpaare synchron, ohne dass Skripte oder Hilfsvariablen nötig sind. Ändert sich eine Variable eines Paares, setzt die Instanz die andere Variable per `RequestAction` auf denselben Wert. Die Synchronisation läuft wahlweise in beide Richtungen oder nur in eine. Mit aktivem Watchdog legt die Instanz Statusvariablen an.
 
 ## Inhaltsverzeichnis
@@ -44,7 +44,7 @@ LastError | Letzter Fehler | String | Paare, bei denen das Nachsetzen nicht mög
 
 ## 3. Funktionen
 
-`UG_Watchdog(int $InstanzID)`: Gleicht alle Paare sofort ab. Läuft sonst über das Intervall.
+`VSP_Watchdog(int $InstanzID)`: Gleicht alle Paare sofort ab. Läuft sonst über das Intervall.
 
 ## 4. Spenden
 

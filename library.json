@@ -1,12 +1,12 @@
 {
     "id": "{A43B05E2-A491-B25D-1DE3-A7523211D8ED}",
     "author": "Kai Schnittcher",
-    "name": "UniversalGateway",
-    "url": "https://github.com/Schnittcher/UniversalGateway",
+    "name": "Variablenspiegel",
+    "url": "https://github.com/Schnittcher/Variablenspiegel",
     "compatibility": {
         "version": "9.0"
     },
-    "version": "2.1",
+    "version": "2.0",
     "build": 0,
     "date": 0
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class UniversalGateway extends IPSModuleStrict
+class Variablenspiegel extends IPSModuleStrict
 {
     // Richtung der Synchronisation eines Paares
     private const DIRECTION_BOTH = 0;
@@ -15,7 +15,7 @@ class UniversalGateway extends IPSModuleStrict
         parent::Create();
         $this->RegisterPropertyString('Variables', '[]');
         $this->RegisterPropertyInteger('WatchdogInterval', 0);
-        $this->RegisterTimer('Watchdog', 0, 'UG_Watchdog($_IPS[\'TARGET\']);');
+        $this->RegisterTimer('Watchdog', 0, 'VSP_Watchdog($_IPS[\'TARGET\']);');
     }
 
     public function ApplyChanges(): void
@@ -88,7 +88,7 @@ class UniversalGateway extends IPSModuleStrict
             try {
                 if (!@RequestAction($Target, GetValue($Source))) {
                     $this->SendDebug(__FUNCTION__, 'RequestAction für ' . $Target . ' nicht erfolgreich, nächster Versuch beim nächsten Lauf', 0);
-                    $Errors[] = $Label . ': Ziel ' . $Target . ' nicht erreichbar';
+                    $Errors[] = $Label . ': ' . sprintf($this->Translate('Target %d not reachable'), $Target);
                 }
             } catch (Throwable $e) {
                 $this->SendDebug(__FUNCTION__, 'Ziel ' . $Target . ' nicht erreichbar: ' . $e->getMessage(), 0);
@@ -157,15 +157,15 @@ class UniversalGateway extends IPSModuleStrict
         $Value = ['PRESENTATION' => VARIABLE_PRESENTATION_VALUE_PRESENTATION];
         $InSync = $Value + [
             'OPTIONS' => json_encode([
-                ['Caption' => 'Abweichung', 'ColorActive' => true, 'ColorValue' => 16711680, 'ContentColorActive' => false, 'ContentColorValue' => -1, 'IconActive' => false, 'IconValue' => '', 'Value' => false],
-                ['Caption' => 'Synchron', 'ColorActive' => true, 'ColorValue' => 65280, 'ContentColorActive' => false, 'ContentColorValue' => -1, 'IconActive' => false, 'IconValue' => '', 'Value' => true]
+                ['Caption' => $this->Translate('Deviation'), 'ColorActive' => true, 'ColorValue' => 16711680, 'ContentColorActive' => false, 'ContentColorValue' => -1, 'IconActive' => false, 'IconValue' => '', 'Value' => false],
+                ['Caption' => $this->Translate('In sync'), 'ColorActive' => true, 'ColorValue' => 65280, 'ContentColorActive' => false, 'ContentColorValue' => -1, 'IconActive' => false, 'IconValue' => '', 'Value' => true]
             ])
         ];
         $DateTime = ['PRESENTATION' => VARIABLE_PRESENTATION_DATE_TIME, 'DATE' => 1, 'MONTH_TEXT' => false, 'DAY_OF_THE_WEEK' => false, 'TIME' => 2];
-        $this->MaintainVariable('InSync', 'Synchron', VARIABLETYPE_BOOLEAN, $InSync, 1, $Active);
-        $this->MaintainVariable('Deviations', 'Abweichende Paare', VARIABLETYPE_INTEGER, $Value, 2, $Active);
-        $this->MaintainVariable('LastRun', 'Letzter Abgleich', VARIABLETYPE_INTEGER, $DateTime, 3, $Active);
-        $this->MaintainVariable('LastError', 'Letzter Fehler', VARIABLETYPE_STRING, $Value, 4, $Active);
+        $this->MaintainVariable('InSync', 'In sync', VARIABLETYPE_BOOLEAN, $InSync, 1, $Active);
+        $this->MaintainVariable('Deviations', 'Deviating pairs', VARIABLETYPE_INTEGER, $Value, 2, $Active);
+        $this->MaintainVariable('LastRun', 'Last run', VARIABLETYPE_INTEGER, $DateTime, 3, $Active);
+        $this->MaintainVariable('LastError', 'Last error', VARIABLETYPE_STRING, $Value, 4, $Active);
     }
 
     private function variableUsable(int $VariableID): bool

@@ -1,14 +1,15 @@
 {
     "id": "{989DBDCA-4C2F-CF0D-135A-A5FAA4F35AF3}",
-    "name": "UniversalGateway",
+    "name": "Variablenspiegel",
     "type": 4,
     "vendor": "",
     "aliases": [
-        "Universal Gateway"
+        "Universal Gateway",
+        "UniversalGateway"
     ],
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],
-    "prefix": "UG",
+    "prefix": "VSP",
     "url": "https://deinsmarthome.info"
 }
