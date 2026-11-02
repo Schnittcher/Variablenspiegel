@@ -14,6 +14,7 @@
 ### Fixes
 - Entfernte oder geänderte Variablenpaare werden nicht mehr weiter synchronisiert.
 - Gelöschte Variablen in der Liste führen nicht mehr zu Fehlermeldungen.
+- Der Dokumentationslink der Instanzen führt jetzt zur Dokumentation auf deinsmarthome.info.
 
 ## 06.06.2019 - Version 1.0
 
